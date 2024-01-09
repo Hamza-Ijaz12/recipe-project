@@ -598,7 +598,7 @@ img{
 ***/
 
 .main-header{
-	position:absolute;
+	/* position:absolute; */
 	z-index:999;
 	width:100%;
 	-ms-animation-duration: 500ms;
@@ -2014,7 +2014,7 @@ img{
 }
 
 .product-form-section .inner-container.margin-top{
-	margin-top:-85px;
+	margin-top:15px;
 }
 
 .product-form-section .default-form .ui-selectmenu-button.ui-button{
