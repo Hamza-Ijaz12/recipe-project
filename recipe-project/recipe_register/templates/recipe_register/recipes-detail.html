@@ -1,0 +1,99 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+	<!-- Page Title -->
+    <section class="page-title" style="background-image:url('{% static "images/background/12.png" %}')">
+    	<div class="auto-container">
+			<h1>Recipes Single</h1>
+        </div>
+    </section>
+    <!--End Page Title-->
+	
+	<!--Sidebar Page Container-->
+    <div class="sidebar-page-container recipes-details-area">
+    	<div class="auto-container">
+        	<div class="row clearfix">
+				<!-- Content Side -->
+                <div class="content-side col-lg-12 col-md-12 col-sm-12">
+                	<div class="recipe-detail">
+						<div class="inner-box">
+							<div class="image recipe-img">
+								<img src="{{desired_recipe.image_path}}" alt="" />
+							</div>
+							<div class="content" style="background-image:url('{% static "images/background/13.png" %}')">
+								
+								
+								<h2>{{desired_recipe.title}}</h2>
+								
+								
+							</div>
+							
+							<div class="row clearfix">
+							
+								<div class="column col-lg-12">
+
+									<div class="my-tab">
+										
+										<div class="tab-content" id="pills-tabContent">
+										  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+										  		<div class="row">
+										  			
+										  			<div class="col-lg-6">
+										  				<!-- Ingredients Block -->
+														<div class="ingredients-block">
+															<div class="block-inner">
+																<h4>Ingredients</h4>
+																<ul class="ingredients-list">
+																	{% for i in desired_recipe.ingredients %}
+																	<li>{{i}}</li>
+																	{% endfor %}
+																	
+																</ul>
+															</div>
+														</div>
+									
+														<!-- Nutrition Block -->
+														
+										  			</div>
+										  			<div class="col-lg-6">
+										  				<!-- Ingredients Block -->
+														  <div class="ingredients-block">
+															<div class="block-inner">
+																<h4>Nutrition</h4>
+																<ul class="nutrition-list">
+																	{% for i in desired_recipe.nutrients %}
+																	<li>{{i.0}} <span>{{i.1}}</span></li>
+																	{% endfor %}
+																	
+																	
+																</ul>
+															</div>
+														</div>
+										  			</div>	
+										  		</div>
+										  </div>
+										 
+										</div>
+									</div>
+								</div>
+							
+							</div>
+
+							
+								
+							
+						
+							
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+
+
+	{% endblock %}

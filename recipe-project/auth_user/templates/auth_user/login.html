@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+ 	
+  
+	<!-- Page Title -->
+    <section class="page-title" style="background-image:url('{% static "images/background/17.png" %}')">
+    	<div class="auto-container">
+			<h1>login</h1>
+        </div>
+    </section>
+    <!-- End Page Title -->
+	
+	<!-- Login Container -->
+    <div class="login-container margin">
+		<div class="top-layer" style="background-image:url('{% static "images/background/20.png" %}')"></div>
+		<div class="bottom-layer" style="background-image:url('{% static "images/background/21.png" %}')"></div>
+    	<div class="auto-container">
+			<div class="inner-container">
+				
+				<div class="image">
+					<img src="{% static 'images/resource/login.jpg' %}" alt="" />
+					
+					<!-- Login Form -->
+					<div class="login-form">
+						<div class="pattern-layer" style="background-image:url('{% static "images/background/18.png" %}')"></div>
+						
+						{% if message %}
+						<div class="fill">{{message}}</div>
+						{% endif %}
+						
+						<!-- Register Form -->
+						<form method="post">
+							{% csrf_token %}
+							<div class="form-group">
+								<input type="text" name="username" placeholder="User Name" required>
+							</div>
+							
+							<div class="form-group">
+								<input type="password" name="password" placeholder="Password" required>
+							</div>
+							
+							
+							
+							<div class="form-group">
+								<button class="theme-btn btn-style-one" type="submit" name="submit-form"><span class="txt">Login</span></button>
+								Don't have an account? <a href="{% url 'signup' %}">Sign Up</a>
+							</div>
+
+						</form>
+							
+					</div>
+					<!-- End Register Form -->
+					
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<!-- End Register Container -->
+	
+	
+	
+	
+
+
+{% endblock %}
