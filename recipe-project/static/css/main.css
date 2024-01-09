@@ -6193,3 +6193,7 @@ img{
 .recipe-img img{
 	height: 600px;
 }
+
+.bg-black{
+	background-color: #000000;
+}

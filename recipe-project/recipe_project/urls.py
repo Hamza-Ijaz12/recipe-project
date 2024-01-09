@@ -24,7 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('auth/', include('auth_user.urls')),
     path('recipe/', include('recipe_register.urls')),
-    path('', lambda request: redirect('find')),
+    path('', lambda request: redirect('home')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)

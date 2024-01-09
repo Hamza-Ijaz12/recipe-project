@@ -61,7 +61,7 @@ def recipesearch(request):
     
     request.session['recipes']=recipes_data
     context = {'recipes_data':recipes_data,'message':message}
-    return render(request, 'auth_user/index.html', context)
+    return render(request, 'recipe_register/find.html', context)
 
 
 # for indvivual recipe

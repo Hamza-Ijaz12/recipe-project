@@ -6,9 +6,9 @@ from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.decorators import login_required
 
 def home(request):
-    return redirect('find')
-    # context = {}
-    # return render(request, 'auth_user/index.html', context)
+    
+    context = {}
+    return render(request, 'auth_user/index.html', context)
 
 def signup(request):
     if request.method == 'POST':
